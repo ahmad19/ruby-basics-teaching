@@ -41,9 +41,11 @@ class AllPatternTest < Minitest::Test
   end
 
   def test_all_empty
-    skip
     strings = ["", "", "", "", "", "", ""]
-    # Your code goes here
+    all_empty = true
+    strings.each do |string|
+      all_empty = false unless string.empty?
+    end
     assert all_empty
   end
 
