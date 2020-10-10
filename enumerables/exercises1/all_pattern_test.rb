@@ -23,10 +23,11 @@ class AllPatternTest < Minitest::Test
   end
 
   def test_all_gone
-    skip
     words = ["gone", "gone", "gone", "gone", "gone", "gone", "gone"]
     all_gone = true
-    # Your code goes here
+    words.each do |word|
+      all_gone = false unless word == 'gone'
+    end
     assert all_gone
   end
 
