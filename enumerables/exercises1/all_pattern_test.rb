@@ -68,9 +68,11 @@ class AllPatternTest < Minitest::Test
   end
 
   def test_all_lies
-    skip
     lies = [false, false, false, false]
-    # Your code goes here
+    all_lies = true
+    lies.each do |lie|
+      all_lies = false unless lie == false
+    end
     assert all_lies
   end
 
