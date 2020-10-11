@@ -59,9 +59,11 @@ class AllPatternTest < Minitest::Test
   end
 
   def test_not_all_uppercase
-    skip
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
-    # Your code goes here
+    all_caps = true
+    words.each do |word|
+      all_caps = false  unless word == word.upcase
+    end
     refute all_caps
   end
 
