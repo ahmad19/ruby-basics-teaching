@@ -30,9 +30,11 @@ class AllTest < Minitest::Test
   end
 
   def test_not_all_gone
-    skip
     words = ["gone", "gone", "gone", "gone", "gone", "there", "gone", "gone"]
-    # Your code goes here
+    all_gone = true
+    words.map do |word|
+      all_gone = false unless word != "gone"
+    end
     refute all_gone
   end
 
