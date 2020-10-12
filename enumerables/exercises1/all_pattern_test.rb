@@ -89,8 +89,8 @@ class AllPatternTest < Minitest::Test
     numbers = [981, 831, 509, 332, 892, 8999, 110]
     all_3_digits = true
     numbers.each do |number|
-      all_3_digits = false unless number.digits == 3
-    end
+      all_3_digits = false unless number.digits.count == 3
+  end
     refute all_3_digits
   end
 
