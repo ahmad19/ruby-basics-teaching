@@ -71,7 +71,7 @@ class AllPatternTest < Minitest::Test
     lies = [false, false, false, false]
     all_lies = true
     lies.each do |lie|
-      all_lies = false unless lie == false
+      all_lies = false if lie
     end
     assert all_lies
   end
