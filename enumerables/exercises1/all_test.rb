@@ -66,9 +66,11 @@ class AllTest < Minitest::Test
   end
 
   def test_all_lies
-    skip
     lies = [false, false, false, false]
-    # Your code goes here
+    all_lies = true
+    lies.map do |lie|
+      all_lies = false if lie
+    end
     assert all_lies
   end
 
