@@ -84,9 +84,11 @@ class AllTest < Minitest::Test
   end
 
   def test_not_all_3_digits_long
-    skip
     numbers = [981, 831, 509, 332, 892, 8999, 110]
-    # Your code goes here
+    all_3_digits = true
+    numbers.map do |number|
+      all_3_digits = false unless number.digits.count == 3
+    end
     refute all_3_digits
   end
 
