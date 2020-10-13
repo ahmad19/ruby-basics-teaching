@@ -93,9 +93,11 @@ class AllTest < Minitest::Test
   end
 
   def test_all_4_letter_words
-    skip
     words = ["love", "hate", "fire", "bird", "call"]
-    # Your code goes here
+    all_4_letters = true
+    words.  map do |word|
+      all_4_letters = false unless word.length == 4
+    end
     assert all_4_letters
   end
 
