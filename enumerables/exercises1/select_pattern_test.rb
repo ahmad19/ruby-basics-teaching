@@ -55,9 +55,8 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_pick_dinosaurs
-    skip
     animals = ["tyrannosaurus", "narwhal", "eel", "achillesaurus", "qingxiusaurus"]
-    # Your code goes here
+    dinosaurs = animals.select {|animal| animal.include? ('saurus')}
     assert_equal ["tyrannosaurus", "achillesaurus", "qingxiusaurus"], dinosaurs
   end
 
