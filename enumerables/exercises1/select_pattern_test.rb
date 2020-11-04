@@ -72,9 +72,8 @@ class SelectPatternTest < Minitest::Test
   end
 
   def test_pick_hashes
-    skip
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
-    # Your code goes here
+    hashes = elements.select {|element| element.is_a?  (Hash) }
     assert_equal [{:dog=>"fido"}, {:stuff=>"things"}], hashes
   end
 
