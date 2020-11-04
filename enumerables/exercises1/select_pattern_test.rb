@@ -65,9 +65,8 @@ class SelectPatternTest < Minitest::Test
     assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], floats
   end
   def test_pick_arrays
-    skip
     elements = ["CAT", ["dog"], 23, [56, 3, 8], "AIMLESS", 43, "butter"]
-    # Your code goes here
+    arrays = elements.select {|element| element.class == Array }
     assert_equal [["dog"], [56, 3, 8]], arrays
   end
 
