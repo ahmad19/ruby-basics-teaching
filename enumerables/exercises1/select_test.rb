@@ -69,9 +69,8 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_hashes
-    skip
     elements = ["cat", {:dog=>"fido"}, 23, {:stuff=>"things"}, "aimless", 43]
-    # Your code goes here
+    hashes  = elements.find_all {|element|element.class == Hash}
     assert_equal [{:dog=>"fido"}, {:stuff=>"things"}], hashes
   end
 
