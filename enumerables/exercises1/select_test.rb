@@ -27,9 +27,8 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_words_with_more_than_three_letters
-    skip
     words = ["pill", "bad", "finger", "cat", "blue", "dog", "table", "red"]
-    # Your code goes here
+    selected = words.reject {|word| word.length == 3}
     assert_equal ["pill", "finger", "blue", "table"], selected
   end
 
