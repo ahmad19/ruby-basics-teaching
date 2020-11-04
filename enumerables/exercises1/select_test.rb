@@ -33,9 +33,8 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_words_ending_in_e
-    skip
     words = ["are", "you", "strike", "thinking", "belt", "piece", "warble", "sing", "pipe"]
-    # Your code goes here
+    selected  = words.find_all {|word| word.end_with? "e"}
     assert_equal ["are", "strike", "piece", "warble", "pipe"], selected
   end
 
