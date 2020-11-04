@@ -57,9 +57,8 @@ class SelectTest < Minitest::Test
   end
 
   def test_pick_floats
-    skip
     numbers = [3, 1.4, 3.5, 2, 4.9, 9.1, 8.0]
-    # Your code goes here
+    floats = numbers.find_all {|number| number.class == Float }
     assert_equal [1.4, 3.5, 4.9, 9.1, 8.0], floats
   end
 
