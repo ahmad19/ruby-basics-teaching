@@ -95,7 +95,7 @@ class HashesTest < Minitest::Test
     # Using the books hash defined above,
     # change the value associated with
     # "John Steinbeck" to "Of Mice and Men"
-    ______
+    books["John Steinbeck"] = "Of Mice and Men"
     expected = {
       "John Steinbeck" => "Of Mice and Men",
       "Harper Lee" => "To Kill a Mockingbird"
