@@ -196,7 +196,7 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # increment Julio's age by one
-    ______
+    ages[:Julio] += 1
     assert_equal 9, ages[:Julio]
   end
 
@@ -208,7 +208,6 @@ class HashesTest < Minitest::Test
     }
     # Using the ages hash defined above
     # get an array of all the names
-    names = ______
      names = ages.keys
     assert_equal [:Jimmy, :Julio, :Juliet], names
   end
