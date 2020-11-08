@@ -50,7 +50,9 @@ class HashesTest < Minitest::Test
     # In the line below, create a new hash with
     # default values of zero
     # create a "tomatoes" key and a :carrots key
-    ingredients = ______
+    ingredients = {"tomatoes" => 0 ,
+      :carrots => 0
+      }
 
     assert_equal 0, ingredients["tomatoes"]
     assert_equal 0, ingredients[:carrots]
